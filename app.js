@@ -31,6 +31,7 @@ const whitelist_domains = [
   'http://localhost:3000',
   // prod origin(s)
   'http://haboclient.herokuapp.com',
+  'https://haboclient.herokuapp.com',
 ];
 const corsOptions = {
   // https://expressjs.com/en/resources/middleware/cors.html
