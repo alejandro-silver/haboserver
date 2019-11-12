@@ -6,6 +6,7 @@ const express_fileupload = require('express-fileupload');
 const models = require('./models');
 const { fn, col, Op } = require('sequelize');
 const cloudinary_manager = require('./cloudinary_manager');
+const cors = require('cors');
 
 const GetRouter = require('./routers/get-router');
 const PostRouter = require('./routers/post-router');
@@ -17,7 +18,7 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 require('dotenv').config()
-
+app.use(cors());
 app.use(body_parser.json());
 app.use(body_parser.urlencoded({ extended: false }));
 app.use(client_sessions({
